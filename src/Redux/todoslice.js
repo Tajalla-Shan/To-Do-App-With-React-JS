@@ -5,7 +5,7 @@ const todoSlice = createSlice({
   initialState: [],
   reducers: {
     addTask: (state, action) => {
-      state.push(action.payload);
+      state.push({ ...action.payload, checked: false });
     },
     removeTask: (state, action) => {
       return state.filter((task) => task.id !== action.payload.id);
@@ -17,8 +17,15 @@ const todoSlice = createSlice({
         taskToEdit.description = action.payload.description;
       }
     },
+    toggleChecked: (state, action) => {
+      const taskToCheck = state.find((task) => task.id === action.payload.id);
+      if (taskToCheck) {
+        taskToCheck.checked = !taskToCheck.checked; // Toggle the `checked` state
+      }
+    },
   },
 });
 
-export const { addTask, removeTask, editTask } = todoSlice.actions;
+export const { addTask, removeTask, editTask, toggleChecked } =
+  todoSlice.actions;
 export default todoSlice.reducer;
