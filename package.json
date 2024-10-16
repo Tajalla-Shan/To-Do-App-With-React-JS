@@ -1,7 +1,8 @@
 {
-  "name": "textutils-app-with-reactjs",
+  "homepage": "https://tajalla-shan.github.io/to-do-app",
+  "name": "to-do-app",
   "version": "1.0.0",
-  "description": "A React.js application for text utilities.",
+  "description": "It is a React to do app",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -11,7 +12,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://tajalla-shan.github.io/To-Do-App-With-React-JS/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "react": "^18.0.0",
