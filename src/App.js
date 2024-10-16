@@ -1,17 +1,16 @@
-
-import './App.css';
-import Navbar from './Components/Navbar';
-import TaskList from './Components/TaskList';
-import TaskForm from './Components/TaskForm';
-
-
+import "./App.css";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import TaskList from "./Components/TaskList";
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <TaskList/>
-    <TaskForm/>
+      <div className="main-content">
+        <Navbar />
+        <TaskList />
+      </div>
+      <Footer />
     </>
   );
 }
